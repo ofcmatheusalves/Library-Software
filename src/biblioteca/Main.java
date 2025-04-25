@@ -26,7 +26,7 @@ public class Main {
 
         do {
             System.out.println();
-            System.out.print("Enter the desired option (If you want to exit enter 0): ");
+            System.out.print("Enter the desired option: ");
             user.options = scan.nextInt();
             user.setOptions(user.options);
 
