@@ -23,6 +23,9 @@ public class Main {
         System.out.printf("Hello %s, nice to meet you!\n",user.login);
         System.out.println("-----------------------------");
 
+        System.out.println("Options:");
+        System.out.println("1 - Add book. \n2 - Remove book. \n3 - Search book. \n0 - End program.");
+
 
         do {
             System.out.println();
@@ -31,7 +34,7 @@ public class Main {
             user.setOptions(user.options);
 
         } while ( user.options != 0);
-            System.out.println("End");
+            System.out.println("Good-bye :D...!");
 
 
 

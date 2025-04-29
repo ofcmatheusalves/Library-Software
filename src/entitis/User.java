@@ -12,6 +12,8 @@ public class User {
     public int add;
     public int remove;
     public int options;
+    public char s;
+    public char n;
 
     Books books = new Books();
     Scanner scan = new Scanner(System.in);
@@ -39,7 +41,12 @@ public class User {
     public void removeBook( int remove){
         this.remove = remove;
 
+        System.out.println();
         System.out.println("Enter title's book you want remove: ");
+        books.title = scan.nextLine();
+        System.out.println();
+        System.out.printf("Removed: %s\n", books.title);
+
     }
 
     public void setOptions(int options){
