@@ -11,9 +11,8 @@ public class User {
     public String key;
     public int add;
     public int remove;
+    public int search;
     public int options;
-    public char s;
-    public char n;
 
     Books books = new Books();
     Scanner scan = new Scanner(System.in);
@@ -37,7 +36,6 @@ public class User {
         books.date = scan.nextLine();
     }
 
-
     public void removeBook( int remove){
         this.remove = remove;
 
@@ -46,6 +44,18 @@ public class User {
         books.title = scan.nextLine();
         System.out.println();
         System.out.printf("Removed: %s\n", books.title);
+
+    }
+
+    public void searchBook (int search){
+        this.search = search;
+
+        System.out.println();
+        System.out.println("Enter title's book you want search: ");
+        books.title = scan.nextLine();
+        System.out.println(books.title);
+        System.out.println(books.author);
+        System.out.println(books.date);
 
     }
 
@@ -58,6 +68,8 @@ public class User {
         else if (options == 2) {
             removeBook(remove);
         }
+        else if (options == 3) {
+            searchBook(search);
+        }
     }
-
 }
